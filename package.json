@@ -1,0 +1,19 @@
+{
+  "name": "linux-predator-gui",
+  "version": "1.0.0",
+  "description": "Linux GUI App for https://github.com/JafarAkhondali/acer-helios-300-rgb-keyboard-linux-module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zehratullayl/Linux-Predator-GUI.git"
+  },
+  "author": "Zehra Tul Layl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zehratullayl/Linux-Predator-GUI/issues"
+  },
+  "homepage": "https://github.com/zehratullayl/Linux-Predator-GUI#readme"
+}
