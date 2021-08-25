@@ -19,8 +19,9 @@ Make sure you have nodejs and npm installed
 1. Your color preferences will not be saved on exit
 2. Only Zoom, Breathe, and Wave Modes available
 3. Can't control brightness of the keys
-4.  Known bugs -> if the keyboard color is not responding
-   follow the following instructions
-   1. sudo ./uninstall.sh
-   2. sudo rm /dev/acer-gkbbl-0
-   3. sudo ./install.sh
+## Known bugs
+If the keyboard color is not responding follow the following instructions
+1. close the app
+2. sudo ./uninstall.sh
+3. sudo rm /dev/acer-gkbbl-0
+4. sudo ./install.sh
