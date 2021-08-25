@@ -1,16 +1,705 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    /* General Button Style */
+    .button {
+      position: relative;
+      display: block;
+      background: transparent;
+      width: 200px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 15px;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+        "Helvetica Neue", "Helvetica";
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 40px auto;
+    }
+    .button:before,
+    .button:after {
+      width: 200px;
+      left: 0px;
+      height: 27px;
+      z-index: -1;
+    }
+    .mediumseagreen {
+      color: rgb(212, 212, 212);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .mediumseagreen:before,
+    .mediumseagreen:after {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: 4px solid rgb(30, 136, 78);
+      background: var(--background);
+    }
+    .mediumseagreen2 {
+      color: rgb(212, 212, 212);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .mediumseagreen2:before,
+    .mediumseagreen2:after {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: 4px solid rgb(30, 136, 78);
+      background: var(--background);
+    }
+
+    .mediumseagreen3 {
+      color: rgb(212, 212, 212);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .mediumseagreen3:before,
+    .mediumseagreen3:after {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: 4px solid rgb(30, 136, 78);
+      background: var(--background);
+    }
+
+    .mediumseagreen4 {
+      color: rgb(212, 212, 212);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .mediumseagreen4:before,
+    .mediumseagreen4:after {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: 4px solid rgb(30, 136, 78);
+      background: var(--background);
+    }
+
+    .button:before {
+      position: absolute;
+      content: "";
+      border-bottom: none;
+      -webkit-transform: perspective(15px) rotateX(5deg);
+      -moz-transform: perspective(15px) rotateX(5deg);
+      transform: perspective(15px) rotateX(5deg);
+    }
+    .button:after {
+      position: absolute;
+      top: 32px;
+      content: "";
+      border-top: none;
+      -webkit-transform: perspective(15px) rotateX(-5deg);
+      -moz-transform: perspective(15px) rotateX(-5deg);
+      transform: perspective(15px) rotateX(-5deg);
+    }
+
+    /* Button Hover Style */
+    .mediumseagreen:hover:before,
+    .mediumseagreen:hover:after {
+      background: rgb(30, 136, 78);
+      transition: all 0.5s;
+    }
+    .mediumseagreen2:hover:before,
+    .mediumseagreen2:hover:after {
+      background: rgb(30, 136, 78);
+      transition: all 0.5s;
+    }
+    .mediumseagreen3:hover:before,
+    .mediumseagreen3:hover:after {
+      background: rgb(30, 136, 78);
+      transition: all 0.5s;
+    }
+    .mediumseagreen4:hover:before,
+    .mediumseagreen4:hover:after {
+      background: rgb(30, 136, 78);
+      transition: all 0.5s;
+    }
+
+    .button:hover {
+      color: #fff;
+    }
+
+    /* Just for presentation */
+    body {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgb(54, 54, 54);
+    }
+    .slidecontainer {
+      margin: auto;
+      width: 50%;
+      /* margin: auto;
+      width: 50%;
+      border: 3px solid green; */
+      padding: 10px;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 15px;
+      border-radius: 5px;
+      background: #2c2c2c;
+      outline: none;
+      opacity: 0.6;
+      -webkit-transition: 0.2s;
+      transition: opacity 0.2s;
+    }
+
+    .slider:hover {
+      opacity: 1;
+    }
+
+    #speed1::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: rgb(30, 136, 78);
+      cursor: pointer;
+    }
+
+    #speed2::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: rgb(30, 136, 78);
+      cursor: pointer;
+    }
+
+    #speed3::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: rgb(30, 136, 78);
+      cursor: pointer;
+    }
+
+    #red1::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--SliderColor1);
+      cursor: pointer;
+    }
+    #green1::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--SliderColor2);
+      cursor: pointer;
+    }
+    #blue1::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--SliderColor3);
+      cursor: pointer;
+    }
+
+    #red2::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--SliderColor1);
+      cursor: pointer;
+    }
+    #green2::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--SliderColor2);
+      cursor: pointer;
+    }
+    #blue2::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--SliderColor3);
+      cursor: pointer;
+    }
+
+    /* .slider::-moz-range-thumb {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: rgb(30, 136, 78);
+      cursor: pointer;
+    } */
+    Label {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+        "Helvetica Neue", "Helvetica";
+      color: #9b9999;
+    }
+    #rec1 {
+      height: 10px;
+      width: 100%;
+      margin-top: 5px;
+    }
+    #rec2 {
+      height: 10px;
+      width: 100%;
+      margin-top: 5px;
+    }
+    .container {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin-left: 5%;
+    }
+
+    /* Hide the browser's default radio button */
+    .container input {
+      position: relative;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    /* Create a custom radio button */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: rgb(77, 77, 77);
+      border-radius: 50%;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    /* When the radio button is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: rgb(30, 136, 78);
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .container .checkmark:after {
+      top: 7px;
+      left: 7px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgb(30, 136, 78);
+    }
+  </style>
   <head>
     <meta charset="utf-8" />
-    <title>Title</title>
+    <title>OpenSense Beta</title>
   </head>
   <body>
-    <button onclick="func('Zoom Effect')">Zoom</button>
-    <button onclick="func('Breathe Effect')">Breathe</button>
+    <a href="#" onclick="func('zoom')" class="button mediumseagreen2" id="zoom"
+      >Zoom</a
+    >
+    <div class="slidecontainer" id="sl1">
+      <!-- <label class="container"
+        >RIGHT TO LEFT
+        <input type="radio" id="radio1" checked="checked" name="radio" />
+        <span class="checkmark"></span>
+      </label>
+      <label class="container"
+        >LEFT TO RIGHT
+        <input type="radio" id="radio2" name="radio" />
+        <span class="checkmark"></span>
+      </label> -->
+      <br />
+      <br />
+      <label class="Label">SPEED</label>
+      <input
+        type="range"
+        min="1"
+        max="9"
+        value="1"
+        class="slider"
+        id="speed1"
+      />
+      <label class="Label">RED</label>
+      <input
+        type="range"
+        min="1"
+        max="255"
+        value="1"
+        class="slider"
+        id="red1"
+      />
+      <label class="Label">GREEN</label>
+      <input
+        type="range"
+        min="1"
+        max="255"
+        value="1"
+        class="slider"
+        id="green1"
+      />
+      <label class="Label">BLUE</label>
+      <input
+        type="range"
+        min="1"
+        max="255"
+        value="1"
+        class="slider"
+        id="blue1"
+      />
+      <div id="rec1"></div>
+      <!-- <p>Value: <span id="demo"></span></p> -->
+    </div>
+    <a
+      href="#"
+      onclick="func('breathe')"
+      class="button mediumseagreen"
+      id="breathe"
+      >Breathe</a
+    >
+    <div class="slidecontainer" id="sl2">
+      <!-- <label class="container"
+        >RIGHT TO LEFT
+        <input type="radio" id="radio1" checked="checked" name="radio" />
+        <span class="checkmark"></span>
+      </label>
+      <label class="container"
+        >LEFT TO RIGHT
+        <input type="radio" id="radio2" name="radio" />
+        <span class="checkmark"></span>
+      </label> -->
+      <br />
+      <br />
+      <label class="Label">SPEED</label>
+      <input
+        type="range"
+        min="1"
+        max="9"
+        value="1"
+        class="slider"
+        id="speed2"
+      />
+      <label class="Label">RED</label>
+      <input
+        type="range"
+        min="1"
+        max="255"
+        value="1"
+        class="slider"
+        id="red2"
+      />
+      <label class="Label">GREEN</label>
+      <input
+        type="range"
+        min="1"
+        max="255"
+        value="1"
+        class="slider"
+        id="green2"
+      />
+      <label class="Label">BLUE</label>
+      <input
+        type="range"
+        min="1"
+        max="255"
+        value="1"
+        class="slider"
+        id="blue2"
+      />
+      <div id="rec2"></div>
+    </div>
+    <a href="#" onclick="func('wave')" class="button mediumseagreen3" id="wave"
+      >Wave</a
+    >
+    <div class="slidecontainer" id="sl3">
+      <br />
+      <br />
+      <label class="Label">SPEED</label>
+      <input
+        type="range"
+        min="1"
+        max="9"
+        value="1"
+        class="slider"
+        id="speed3"
+      />
+    </div>
+    <a
+      href="#"
+      style="position: absolute; left: 20%; right: 20%; bottom: 5%"
+      onclick="func('apply')"
+      class="button mediumseagreen4"
+      >Apply</a
+    >
+
     <script>
-      function func(x) {
-        window.api.send("toMain", x);
+      var c, s;
+      var SpeedSlider1 = document.querySelector("input[id=speed1]");
+      SpeedSlider1.oninput = (_) => {
+        s = "ss1";
+      };
+      var SpeedSlider2 = document.querySelector("input[id=speed2]");
+      SpeedSlider2.oninput = (_) => {
+        s = "ss2";
+      };
+      var SpeedSlider3 = document.querySelector("input[id=speed3]");
+      SpeedSlider3.oninput = (_) => {
+        s = "ss3";
+      };
+      function send_command(m, s, b, r, g, bl) {
+        var command = "python3 facer_rgb.py";
+        command +=
+          " -m " +
+          m +
+          " -s " +
+          s +
+          " -b " +
+          b +
+          // " -d " +
+          // d +
+          " -cR " +
+          r +
+          " -cG " +
+          g +
+          " -cB " +
+          bl;
+        window.api.send("toMain", command);
       }
+      function send_command2(m, s, b) {
+        var command = "python3 facer_rgb.py";
+        command += " -m " + m + " -s " + s + " -b " + b;
+        window.api.send("toMain", command);
+      }
+      var Slider1 = document.querySelector("input[id=red1]");
+      Slider1.style.setProperty("--SliderColor1", `rgb(0, 0, 0)`);
+      Slider1.oninput = (_) => {
+        Slider1.style.setProperty(
+          "--SliderColor1",
+          `rgb(${Slider1.value}, 0, 0)`,
+        );
+        document.getElementById("rec1").style.backgroundColor =
+          "rgb(" +
+          Slider1.value +
+          "," +
+          Slider2.value +
+          "," +
+          Slider3.value +
+          ")";
+        // var xy = document.getElementById("radio1").checked;
+        // console.log(xy);
+        // send_command(c,)
+      };
+
+      var Slider2 = document.querySelector("input[id=green1]");
+      Slider2.style.setProperty("--SliderColor2", `rgb(0, 0, 0)`);
+      Slider2.oninput = (_) => {
+        Slider2.style.setProperty(
+          "--SliderColor2",
+          `rgb(0, ${Slider2.value}, 0)`,
+        );
+        document.getElementById("rec1").style.backgroundColor =
+          "rgb(" +
+          Slider1.value +
+          "," +
+          Slider2.value +
+          "," +
+          Slider3.value +
+          ")";
+      };
+      var Slider3 = document.querySelector("input[id=blue1]");
+      Slider3.style.setProperty("--SliderColor3", `rgb(0, 0, 0)`);
+      Slider3.oninput = (_) => {
+        document.getElementById("rec1").style.backgroundColor =
+          "rgb(" +
+          Slider1.value +
+          "," +
+          Slider2.value +
+          "," +
+          Slider3.value +
+          ")";
+        Slider2.style.setProperty(
+          "--SliderColor2",
+          `rgb(0, ${Slider2.value}, 0)`,
+        );
+      };
+      var Slider4 = document.querySelector("input[id=red2]");
+      Slider4.style.setProperty("--SliderColor1", `rgb(0, 0, 0)`);
+      Slider4.oninput = (_) => {
+        Slider4.style.setProperty(
+          "--SliderColor1",
+          `rgb(${Slider4.value}, 0, 0)`,
+        );
+        document.getElementById("rec2").style.backgroundColor =
+          "rgb(" +
+          Slider4.value +
+          "," +
+          Slider5.value +
+          "," +
+          Slider6.value +
+          ")";
+      };
+
+      var Slider5 = document.querySelector("input[id=green2]");
+      Slider5.style.setProperty("--SliderColor2", `rgb(0, 0, 0)`);
+      Slider5.oninput = (_) => {
+        Slider5.style.setProperty(
+          "--SliderColor2",
+          `rgb(0, ${Slider5.value}, 0)`,
+        );
+        document.getElementById("rec2").style.backgroundColor =
+          "rgb(" +
+          Slider4.value +
+          "," +
+          Slider5.value +
+          "," +
+          Slider6.value +
+          ")";
+      };
+      var Slider6 = document.querySelector("input[id=blue2]");
+      Slider6.style.setProperty("--SliderColor3", `rgb(0, 0, 0)`);
+      Slider6.oninput = (_) => {
+        Slider6.style.setProperty(
+          "--SliderColor3",
+          `rgb(0, 0, ${Slider6.value})`,
+        );
+        document.getElementById("rec2").style.backgroundColor =
+          "rgb(" +
+          Slider4.value +
+          "," +
+          Slider5.value +
+          "," +
+          Slider6.value +
+          ")";
+      };
+
+      document.getElementById("sl1").style.display = "none";
+      document.getElementById("sl2").style.display = "none";
+      document.getElementById("sl3").style.display = "none";
+      var clicked = 0;
+      function func(arg) {
+        // window.api.send("toMain", x);
+        var c1, c2;
+        var slider;
+        if (arg == "zoom") {
+          c = "mediumseagreen2";
+          c1 = "mediumseagreen";
+          c2 = "mediumseagreen3";
+          slider = "sl1";
+        } else if (arg == "breathe") {
+          c = "mediumseagreen";
+          c1 = "mediumseagreen2";
+          c2 = "mediumseagreen3";
+          slider = "sl2";
+        } else if (arg == "wave") {
+          slider = "sl3";
+          c = "mediumseagreen3";
+          c1 = "mediumseagreen";
+          c2 = "mediumseagreen2";
+        }
+        if (arg != "apply") {
+          var style = document.querySelector("." + c).style;
+          var style1 = document.querySelector("." + c1).style;
+          var style2 = document.querySelector("." + c2).style;
+          var button = document.getElementById(arg);
+          if (clicked == 0) {
+            clicked = 1;
+            style.setProperty("--background", "rgb(30, 136, 78)");
+            style1.visibility = "hidden";
+            style2.visibility = "hidden";
+            // style2.setProperty("--background", transparent);
+          } else {
+            clicked = 0;
+            style.setProperty("--background", "transparent");
+            style1.visibility = "visible";
+            style2.visibility = "visible";
+          }
+          var x = document.getElementById(slider);
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        } else {
+          var cR, cG, cB;
+          var m;
+          if (c == "mediumseagreen2") {
+            m = 5;
+            cR = "red1";
+            cG = "green1";
+            cB = "blue1";
+          } else if (c == "mediumseagreen") {
+            m = 1;
+            cR = "red2";
+            cG = "green2";
+            cB = "blue2";
+          } else if (c == "mediumseagreen3") {
+            m = 3;
+          }
+          if (s == "ss1") {
+            s = SpeedSlider1.value;
+          } else if (s == "ss2") {
+            s = SpeedSlider2.value;
+          } else if (s == "ss3") {
+            s = SpeedSlider3.value;
+          }
+          // var d;
+          // var r2l = document.getElementById("radio1").checked;
+          // if (r2l == true) {
+          //   d = 1;
+          // } else {
+          //   d = 2;
+          // }
+          // if()
+          if (m == 3) {
+            send_command2(m, s, 100);
+          } else {
+            send_command(
+              m,
+              s,
+              100,
+              // d,
+              document.getElementById(cR).value,
+              document.getElementById(cG).value,
+              document.getElementById(cB).value,
+            );
+          }
+        }
+      }
+
       window.api.receive("fromMain", (data) => {
         console.log(`Received ${data} from main process`);
       });
