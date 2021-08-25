@@ -10,10 +10,11 @@ Make sure you have nodejs and npm installed
 5. sudo npm -g install electron
 6. npm install
 7. chmod +x install.sh
-8. sudo ./install.sh
+8. chmod +x run.sh
+9. sudo ./install.sh
 
 ## Launch Instructions
-1. electron .
+1. ./run.sh
 
 ## Limitations of Beta Version
 1. Your color preferences will not be saved on exit
