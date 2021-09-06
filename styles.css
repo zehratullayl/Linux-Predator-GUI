@@ -1,0 +1,356 @@
+::-webkit-scrollbar {
+  display: none;
+}
+/* General Button Style */
+.button {
+  position: relative;
+  display: block;
+  background: transparent;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    "Helvetica";
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 40px auto;
+}
+.button:before,
+.button:after {
+  width: 200px;
+  left: 0px;
+  height: 27px;
+  z-index: -1;
+}
+.mediumseagreen {
+  color: rgb(212, 212, 212);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mediumseagreen:before,
+.mediumseagreen:after {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 4px solid rgb(30, 136, 78);
+  background: var(--background);
+}
+.mediumseagreen2 {
+  color: rgb(212, 212, 212);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mediumseagreen2:before,
+.mediumseagreen2:after {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 4px solid rgb(30, 136, 78);
+  background: var(--background);
+}
+
+.mediumseagreen3 {
+  color: rgb(212, 212, 212);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mediumseagreen3:before,
+.mediumseagreen3:after {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 4px solid rgb(30, 136, 78);
+  background: var(--background);
+}
+
+.mediumseagreen4 {
+  color: rgb(212, 212, 212);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mediumseagreen4:before,
+.mediumseagreen4:after {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 4px solid rgb(30, 136, 78);
+  background: var(--background);
+}
+
+.button:before {
+  position: absolute;
+  content: "";
+  border-bottom: none;
+  -webkit-transform: perspective(15px) rotateX(5deg);
+  -moz-transform: perspective(15px) rotateX(5deg);
+  transform: perspective(15px) rotateX(5deg);
+}
+.button:after {
+  position: absolute;
+  top: 32px;
+  content: "";
+  border-top: none;
+  -webkit-transform: perspective(15px) rotateX(-5deg);
+  -moz-transform: perspective(15px) rotateX(-5deg);
+  transform: perspective(15px) rotateX(-5deg);
+}
+
+/* Button Hover Style */
+.mediumseagreen:hover:before,
+.mediumseagreen:hover:after {
+  color: #fff;
+  text-shadow:
+    /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+    0 0 151px #0fa;
+  background: rgb(30, 136, 78);
+  transition: all 0.5s;
+}
+.mediumseagreen2:hover:before,
+.mediumseagreen2:hover:after {
+  color: #fff;
+  text-shadow:
+    /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+    0 0 151px #0fa;
+  background: rgb(30, 136, 78);
+  transition: all 0.5s;
+}
+.mediumseagreen3:hover:before,
+.mediumseagreen3:hover:after {
+  color: #fff;
+  text-shadow:
+    /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+    0 0 151px #0fa;
+  background: rgb(30, 136, 78);
+  transition: all 0.5s;
+}
+.mediumseagreen4:hover:before,
+.mediumseagreen4:hover:after {
+  color: #fff;
+  text-shadow:
+    /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+    0 0 151px #0fa;
+  background: rgb(30, 136, 78);
+  transition: all 0.5s;
+}
+
+.button:hover {
+  color: #fff;
+  color: #fff;
+  transition: all 0.5s;
+  text-shadow:
+    /* White glow */ 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+/* Just for presentation */
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(54, 54, 54);
+}
+.slidecontainer {
+  margin: auto;
+  width: 50%;
+  /* margin: auto;
+      width: 50%;
+      border: 3px solid green; */
+  padding: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #2c2c2c;
+  outline: none;
+  opacity: 0.6;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+#speed1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgb(30, 136, 78);
+  cursor: pointer;
+}
+
+#speed2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgb(30, 136, 78);
+  cursor: pointer;
+}
+
+#speed3::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgb(30, 136, 78);
+  cursor: pointer;
+}
+
+#red1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--SliderColor1);
+  cursor: pointer;
+}
+#green1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--SliderColor2);
+  cursor: pointer;
+}
+#blue1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--SliderColor3);
+  cursor: pointer;
+}
+
+#red2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--SliderColor1);
+  cursor: pointer;
+}
+#green2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--SliderColor2);
+  cursor: pointer;
+}
+#blue2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--SliderColor3);
+  cursor: pointer;
+}
+
+/* .slider::-moz-range-thumb {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: rgb(30, 136, 78);
+      cursor: pointer;
+    } */
+Label {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    "Helvetica";
+  color: #9b9999;
+}
+#rec1 {
+  height: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+#rec2 {
+  height: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+.container {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: 5%;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(77, 77, 77);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgb(30, 136, 78);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgb(30, 136, 78);
+}
+
+#back {
+  border-radius: 50%;
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.19);
+  text-decoration: none;
+}
+#back:hover {
+  /* color: mediumseagreen; */
+  transition: all 0.5s;
+  color: #fff;
+  text-shadow:
+    /* White glow */ 0 0 2px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+    0 0 151px #0fa;
+}
