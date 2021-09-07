@@ -136,6 +136,12 @@ function func(arg) {
       // style.display = "block";
       style1.display = "none";
       style2.display = "none";
+      var x = document.getElementById(slider);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
       // style2.setProperty("--background", transparent);
     }
     // else {
@@ -146,12 +152,6 @@ function func(arg) {
     //   style1.display = "block";
     //   style2.display = "block";
     // }
-    var x = document.getElementById(slider);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
   } else if (arg == "apply" && arg != "back") {
     var cR, cG, cB;
     var m;
