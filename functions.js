@@ -1,4 +1,4 @@
-var c, s;
+var c, s, b;
 var SpeedSlider1 = document.querySelector("input[id=speed1]");
 SpeedSlider1.oninput = (_) => {
   s = "ss1";
@@ -89,6 +89,7 @@ document.getElementById("sl3").style.display = "none";
 document.getElementById("back").style.display = "none";
 var clicked = 0;
 function func(arg) {
+  // b = document.getElementById("brightness1").value;
   // window.api.send("toMain", x);
   var c1, c2;
   var slider;
@@ -160,13 +161,16 @@ function func(arg) {
       cR = "red1";
       cG = "green1";
       cB = "blue1";
+      b = document.getElementById("brightness1").value;
     } else if (c == "mediumseagreen") {
       m = 1;
       cR = "red2";
       cG = "green2";
       cB = "blue2";
+      b = document.getElementById("brightness2").value;
     } else if (c == "mediumseagreen3") {
       m = 3;
+      b = document.getElementById("brightness3").value;
     }
     if (s == "ss1") {
       s = SpeedSlider1.value;
@@ -183,13 +187,14 @@ function func(arg) {
     //   d = 2;
     // }
     // if()
+    console.log(b);
     if (m == 3) {
-      send_command2(m, s, 100);
+      send_command2(m, s, b, 100);
     } else {
       send_command(
         m,
         s,
-        100,
+        b,
         // d,
         document.getElementById(cR).value,
         document.getElementById(cG).value,
