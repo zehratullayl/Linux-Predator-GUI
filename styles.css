@@ -209,6 +209,16 @@ body {
   cursor: pointer;
 }
 
+#brightness4::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgb(30, 136, 78);
+  cursor: pointer;
+}
+
 #speed2::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -220,6 +230,16 @@ body {
 }
 
 #speed3::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgb(30, 136, 78);
+  cursor: pointer;
+}
+
+#speed4::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 17px;
@@ -297,7 +317,7 @@ Label {
     "Helvetica";
   color: #9b9999;
 }
-#rec1 {
+/* #rec1 {
   height: 10px;
   width: 100%;
   margin-top: 5px;
@@ -306,7 +326,7 @@ Label {
   height: 10px;
   width: 100%;
   margin-top: 5px;
-}
+} */
 .container {
   position: relative;
   padding-left: 30px;
@@ -383,4 +403,40 @@ Label {
     /* White glow */ 0 0 2px #fff, 0 0 10px #fff, 0 0 21px #fff,
     /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
     0 0 151px #0fa;
+}
+
+#left {
+  border-radius: 50%;
+  position: absolute;
+  font-size: 79px;
+  color: rgba(0, 0, 0, 0.19);
+  text-decoration: none;
+  left: 39%;
+  width: 63px;
+  /* right: 20%; */
+  bottom: 5%;
+  cursor: pointer;
+}
+
+#left:hover {
+  transition: all 0.5s;
+  color: mediumseagreen;
+}
+
+#right {
+  border-radius: 50%;
+  position: absolute;
+  font-size: 79px;
+  color: rgba(0, 0, 0, 0.19);
+  text-decoration: none;
+  left: 59%;
+  width: 63px;
+  /* right: 20%; */
+  bottom: 5%;
+  cursor: pointer;
+}
+
+#right:hover {
+  transition: all 0.5s;
+  color: mediumseagreen;
 }

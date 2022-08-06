@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
-    <title>OpenSense Beta</title>
+    <title>OpenSense v1.0</title>
   </head>
   <body>
     <a href="#" onclick="func('back')" id="back">&#8249;</a>
@@ -30,8 +30,9 @@
         type="range"
         min="1"
         max="9"
-        value="1"
+        value="9"
         class="slider"
+        onchange="func('apply')"
         id="speed1"
       />
       <label class="Label">BRIGHTNESS</label>
@@ -39,38 +40,49 @@
         type="range"
         min="1"
         max="100"
-        value="1"
+        value="255"
         class="slider"
+        onchange="func('apply')"
         id="brightness1"
       />
       <label class="Label">RED</label>
       <input
         type="range"
-        min="1"
+        min="16"
         max="255"
-        value="1"
+        value="255"
+        onchange="func('apply')"
         class="slider"
         id="red1"
       />
       <label class="Label">GREEN</label>
       <input
         type="range"
-        min="1"
+        min="16"
         max="255"
-        value="1"
+        onchange="func('apply')"
+        value="255"
         class="slider"
         id="green1"
       />
       <label class="Label">BLUE</label>
       <input
         type="range"
-        min="1"
+        min="16"
+        onchange="func('apply')"
         max="255"
-        value="1"
+        value="255"
         class="slider"
         id="blue1"
       />
-      <div id="rec1"></div>
+      <br></br>
+      <label class="Label">OR CHOOSE FROM COLOR PICKER</label>
+      <input id="rec1" type="color" name="favcolor" onchange="select_color(1)" value="#ff0000" style="width: 100%;
+    height: 26px;
+    background: transparent;
+    border: 0px;" />
+      <!-- <div id="rec1"></div> -->
+
       <!-- <p>Value: <span id="demo"></span></p> -->
     </div>
     <a
@@ -98,7 +110,8 @@
         type="range"
         min="1"
         max="9"
-        value="1"
+        value="255"
+        onchange="func('apply')"
         class="slider"
         id="speed2"
       />
@@ -107,38 +120,48 @@
         type="range"
         min="1"
         max="100"
-        value="1"
+        onchange="func('apply')"
+        value="255"
         class="slider"
         id="brightness2"
       />
       <label class="Label">RED</label>
       <input
         type="range"
-        min="1"
+        min="16"
         max="255"
-        value="1"
+        onchange="func('apply')"
+        value="255"
         class="slider"
         id="red2"
       />
       <label class="Label">GREEN</label>
       <input
         type="range"
-        min="1"
+        min="16"
         max="255"
-        value="1"
+        value="255"
+        onchange="func('apply')"
         class="slider"
         id="green2"
       />
       <label class="Label">BLUE</label>
       <input
         type="range"
-        min="1"
+        min="16"
         max="255"
-        value="1"
+        onchange="func('apply')"
+        value="255"
         class="slider"
         id="blue2"
       />
-      <div id="rec2"></div>
+      <br></br>
+      <label class="Label">OR CHOOSE FROM COLOR PICKER</label>
+      <input id="rec2" type="color" name="favcolor" value="#ff0000" onchange="select_color(2)" style="width: 100%;
+    height: 26px;
+    background: transparent;
+    border: 0px;" />
+      <!-- <div id="rec2"></div> -->
     </div>
     <a href="#" onclick="func('wave')" class="button mediumseagreen3" id="wave"
       >Wave</a
@@ -151,7 +174,8 @@
         type="range"
         min="1"
         max="9"
-        value="1"
+        value="9"
+        onchange="func('apply')"
         class="slider"
         id="speed3"
       />
@@ -159,19 +183,64 @@
       <input
         type="range"
         min="1"
+        onchange="func('apply')"
         max="100"
-        value="1"
+        value="100"
         class="slider"
         id="brightness3"
       />
     </div>
-    <a
+    <div id="direction" style="display: none">
+      <label
+        class="Label"
+        style="
+          display: block;
+          position: absolute;
+          bottom: 17%;
+          left: 45%;
+          margin: auto;
+        "
+        >DIRECTION</label
+      >
+      <div id="left" onclick="rightToLeft()">&#8249;</div>
+      <div id="right" onclick="leftToRight()">&#8250;</div>
+    </div>
+
+    <a href="#" onclick="func('neon')" class="button mediumseagreen4" id="neon"
+      >Neon</a
+    >
+    <div class="slidecontainer" id="sl4">
+      <br />
+      <br />
+      <label class="Label">SPEED</label>
+      <input
+        type="range"
+        min="1"
+        max="9"
+        value="9"
+        onchange="func('apply')"
+        class="slider"
+        id="speed4"
+      />
+      <label class="Label">BRIGHTNESS</label>
+      <input
+        type="range"
+        min="1"
+        onchange="func('apply')"
+        max="100"
+        value="100"
+        class="slider"
+        id="brightness4"
+      />
+    </div>
+
+    <!-- <a
       href="#"
-      style="position: absolute; left: 20%; right: 20%; bottom: 5%"
+      
       onclick="func('apply')"
       class="button mediumseagreen4"
       >Apply</a
-    >
+    > -->
     <script src="functions.js"></script>
   </body>
 </html>
