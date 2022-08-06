@@ -19,6 +19,8 @@ Make sure you have nodejs, npm, and git installed.
 2. Added Persistence so your previous preferences load up on starting the application 
 > NOTE: If for some reason on reboot or boot your keyboard defaults to blue, please run `sudo ./install.sh` before running launch command.
 3. Added Brightness Control and Neon Mode.
+4. Added Support for Directions in Wave Mode.
+5. Bug Fixes
 
 ## Limitations of Version 1.0
 1. Only Zoom, Breathe, Neon and Wave Modes available for now. Version 2.0 will be releasing next week with Static and Shifting Modes
