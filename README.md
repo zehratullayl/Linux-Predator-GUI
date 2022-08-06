@@ -17,7 +17,7 @@ Make sure you have nodejs, npm, and git installed.
 ## What's New In Version 1.0
 1. Added RGB Color Selector along with sliders for selecting color
 2. Added Persistence so your previous preferences load up on starting the application 
-> NOTE: If for some reason on reboot or boot your keyboard defaults to blue, in which case please run `sudo ./install.sh` before running launch command.
+> NOTE: If for some reason on reboot or boot your keyboard defaults to blue, please run `sudo ./install.sh` before running launch command.
 3. Added Brightness Control and Neon Mode.
 
 ## Limitations of Version 1.0
