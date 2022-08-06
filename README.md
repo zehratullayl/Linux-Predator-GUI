@@ -1,15 +1,10 @@
-# OpenSense Beta
+# OpenSense v1
 ## Open Source Linux Implementation of Acer PredatorSense
 Here is the Kernel Module GitHub Link 
 ### Acer Predator RGB keyboard backlight and Turbo mode linux kernel module
 https://github.com/JafarAkhondali/acer-helios-300-rgb-keyboard-linux-module
 ## Installation Instructions For Users
 Make sure you have nodejs, npm, and git installed.
-1. Download https://raw.githubusercontent.com/zehratullayl/Linux-Predator-GUI/main/GUI-Installer.sh
-2. `chmod +x GUI-Installer.sh`
-3. `sudo ./GUI-Installer.sh`
-
-## Installation Instructions for Developers or Contributers
 1. `git clone https://github.com/zehratullayl/Linux-Predator-GUI.git`
 2. `cd Linux-Predator-GUI/`
 3. `sudo ./install.sh`
@@ -17,12 +12,15 @@ Make sure you have nodejs, npm, and git installed.
 5. `sudo npm -g install electron`
 
 ## Launch Instructions
-1. `./run.sh`
+1. `electron .`
 
-## Limitations of Beta Version
-1. Your color preferences will not be saved on exit
-2. Only Zoom, Breathe, and Wave Modes available
-3. Can't control brightness of the keys
+## What's New In Version 1.0
+1. Added RGB Color Selector along with sliders for selecting color
+2. Added Persistence so your previous preferences load up on starting the application ( you will notice the difference if for some reason on reboot or boot your keyboard defaults to blue, in which case please run `sudo ./install.sh` before running launch command )
+3. Added Brightness Control and Neon Mode.
+
+## Limitations of Version 1.0
+1. Only Zoom, Breathe, Neon and Wave Modes available for now. Version 2.0 will be releasing next week with Static and Shifting Modes
 ## Known bugs
 ### If the keyboard color is not responding
 #### Solution
