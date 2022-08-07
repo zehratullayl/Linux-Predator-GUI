@@ -16,6 +16,7 @@ Make sure you have nodejs, npm, and git installed.
 3. `sudo ./install.sh`
 4. `npm install`
 5. `sudo npm -g install electron`
+> :warning: If electron fails to install then run `sudo npm -g install electron --unsafe-perm=true`
 
 ## Launch Instructions
 `electron .`
