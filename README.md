@@ -18,7 +18,7 @@ Make sure you have nodejs, npm, and git installed.
 
 ## Launch Instructions
 `electron .`
-> NOTE: If for some reason on reboot or boot your keyboard defaults to blue or the color is not responding to your selection or previous selections, please run `sudo ./install.sh` before running launch command.
+> NOTE: If for some reason on reboot or boot your keyboard defaults to blue or the color is not responding to your selection or previous selections, please run `sudo ./install.sh` before running launch command or have a look at [Known bugs](#known-bugs)
 
 
 ## What's New In Version 1.0
@@ -31,6 +31,16 @@ Make sure you have nodejs, npm, and git installed.
 
 ## Limitations of Version 1.0
 1. Only Zoom, Breathe, Neon and Wave Modes available for now. Version 2.0 will be releasing next week with Static and Shifting Modes
+
+## Upcoming Releases
+- [ ] New Icon 
+> Please look at [Opening Note](#opening-note)
+- [ ] Snap and Deb packages
+- [ ] Light Mode Support
+- [ ] Profiles
+- [ ] Shitft and Static Modes
+- [ ] Auto updating
+
 ## Known bugs
 ### If the keyboard color is not responding
 #### Solution
