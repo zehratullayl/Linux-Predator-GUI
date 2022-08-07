@@ -32,7 +32,7 @@ Navigate to `Linux-Predator-GUI` folder
 ## What's New In Version 1.0
 1. Added RGB Color Selector along with sliders for selecting color
 2. Added Persistence so your previous preferences load up on starting the application 
-
+3. Removed Apply Button, all changes are now updated live without any need to click Apply button
 3. Added Brightness Control and Neon Mode.
 4. Added Support for Directions in Wave Mode.
 5. Bug Fixes
