@@ -14,9 +14,9 @@ Make sure you have nodejs, npm, and git installed.
 1. `git clone https://github.com/zehratullayl/Linux-Predator-GUI.git`
 2. `cd Linux-Predator-GUI/`
 3. `sudo ./install.sh`
-4. `npm install`
-5. `sudo npm -g install electron`
+4. `sudo npm -g install electron`
 > :warning: If electron fails to install then run `sudo npm -g install electron --unsafe-perm=true`
+5. `npm install`
 
 ## Launch Instructions
 `electron .`
