@@ -29,6 +29,7 @@ Make sure you have nodejs, npm, and git installed.
 3. Added Brightness Control and Neon Mode.
 4. Added Support for Directions in Wave Mode.
 5. Bug Fixes
+6. Updated Core Libraries to latest commits by [Jafar Akhondali](https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module.git)
 
 ## Limitations of Version 1.0
 1. Only Zoom, Breathe, Neon and Wave Modes available for now. Version 2.0 will be releasing next week with Static and Shifting Modes
