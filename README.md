@@ -8,7 +8,8 @@
 Here is the Kernel Module GitHub Link 
 ### Acer Predator RGB keyboard backlight and Turbo mode linux kernel module
 https://github.com/JafarAkhondali/acer-helios-300-rgb-keyboard-linux-module
-## Installation Instructions For Users
+
+## Installation Instructions
 Make sure you have nodejs, npm, and git installed.
 1. `git clone https://github.com/zehratullayl/Linux-Predator-GUI.git`
 2. `cd Linux-Predator-GUI/`
