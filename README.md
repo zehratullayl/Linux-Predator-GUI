@@ -9,7 +9,7 @@ Here is the Kernel Module GitHub Link
 ### Acer Predator RGB keyboard backlight and Turbo mode linux kernel module
 https://github.com/JafarAkhondali/acer-helios-300-rgb-keyboard-linux-module
 
-## Installation Instructions
+## Installation Instructions for New Users
 Make sure you have nodejs, npm, and git installed.
 1. `git clone https://github.com/zehratullayl/Linux-Predator-GUI.git`
 2. `cd Linux-Predator-GUI/`
@@ -17,6 +17,11 @@ Make sure you have nodejs, npm, and git installed.
 4. `sudo npm -g install electron`
 > :warning: If electron fails to install then run `sudo npm -g install electron --unsafe-perm=true`
 5. `npm install`
+
+## Installation Instructions for Existing Users
+1. `git pull`
+2. `npm install`
+3. `sudo ./install.sh`
 
 ## Launch Instructions
 `electron .`
