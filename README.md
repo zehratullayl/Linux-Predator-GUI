@@ -12,12 +12,14 @@ Make sure you have nodejs, npm, and git installed.
 5. `sudo npm -g install electron`
 
 ## Launch Instructions
-1. `electron .`
+`electron .`
+> NOTE: If for some reason on reboot or boot your keyboard defaults to blue or the color is not responding to your selection or previous selections, please run `sudo ./install.sh` before running launch command.
+
 
 ## What's New In Version 1.0
 1. Added RGB Color Selector along with sliders for selecting color
 2. Added Persistence so your previous preferences load up on starting the application 
-> NOTE: If for some reason on reboot or boot your keyboard defaults to blue, please run `sudo ./install.sh` before running launch command.
+
 3. Added Brightness Control and Neon Mode.
 4. Added Support for Directions in Wave Mode.
 5. Bug Fixes
