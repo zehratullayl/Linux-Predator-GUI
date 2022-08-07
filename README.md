@@ -1,4 +1,9 @@
 # OpenSense v1
+
+## Opening Note
+### If anyone likes this sotware please help me out by creating an icon for this project. I would be needing it for the next build as I will be making this into a package. I'm targetting snap and deb. 
+If you are capable of making an icon, then please reach out to me here on Github or mail at zehratullayl@gmail.com
+
 ## Open Source Linux Implementation of Acer PredatorSense
 Here is the Kernel Module GitHub Link 
 ### Acer Predator RGB keyboard backlight and Turbo mode linux kernel module
