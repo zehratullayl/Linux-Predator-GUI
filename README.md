@@ -19,6 +19,7 @@ Make sure you have nodejs, npm, and git installed.
 5. `npm install`
 
 ## Installation Instructions for Existing Users
+Navigate to `Linux-Predator-GUI` folder
 1. `git pull`
 2. `npm install`
 3. `sudo ./install.sh`
