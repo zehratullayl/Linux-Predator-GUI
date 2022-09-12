@@ -61,7 +61,11 @@ Navigate to `Linux-Predator-GUI` folder
 ### If installation is failing with something like 
 > make[1]: *** /lib/modules/5.11.0-27-generic/build: No such file or directory.  Stop.
 #### Solution
+For Debian Based Systems
 1. `uname -r`
 2. copy output of the command
 3. `sudo apt-get install linux-headers-<paste here>`
 4. Proceed to installation Process
+
+For RPM Based Systems
+1. `sudo dnf install kernel-devel kernel-headers`
