@@ -47,7 +47,7 @@ Navigate to `Linux-Predator-GUI` folder
 - [ ] Snap and Deb packages
 - [ ] Light Mode Support
 - [ ] Profiles
-- [ ] Shitft and Static Modes
+- [ ] Shift and Static Modes
 - [ ] Auto updating
 
 ## Known bugs
